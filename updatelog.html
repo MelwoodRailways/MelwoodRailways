@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Update Log</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+      color: white;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    header {
+      padding: 50px 20px;
+      background: black;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #f4c430;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 50px;
+    }
+
+    .update {
+      background: rgba(0,0,0,0.4);
+      margin: 20px auto;
+      max-width: 800px;
+      border-radius: 10px;
+      cursor: pointer;
+      padding: 15px;
+      transition: background 0.3s;
+    }
+
+    .update:hover {
+      background: rgba(0,0,0,0.6);
+    }
+
+    .update-title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #f4c430;
+    }
+
+    .update-date {
+      font-size: 16px;
+      color: #ccc;
+      margin-bottom: 10px;
+    }
+
+    .update-desc {
+      font-size: 18px;
+      text-align: left;
+      display: none; /* hidden by default */
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Melwood Railways</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="updatelog.html">Updates</a>
+  </nav>
+</header>
+
+<!-- Newest update at the top -->
+<div class="update" onclick="toggleUpdate(this)">
+  <div class="update-title">Version 2.3.10</div>
+  <div class="update-date">Unknown</div>
+  <div class="update-desc">
+    <ul>
+      <li>Fixed a few bugs</li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  function toggleUpdate(updateDiv) {
+    const desc = updateDiv.querySelector('.update-desc');
+    // Toggle visibility
+    if(desc.style.display === "block") {
+      desc.style.display = "none";
+    } else {
+      desc.style.display = "block";
+    }
+  }
+</script>
+
+</body>
+</html>
